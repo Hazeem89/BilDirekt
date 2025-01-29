@@ -66,10 +66,17 @@ body {
   margin-top: 16px;
 }
 
-.logos {
+.hero {
+  background-color: #dbdada;
   text-align: center;
+  width: 80vw;
+  margin: 36px auto;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-
 
 .text {
   font-size: 36px;
