@@ -1,8 +1,131 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #0b0b98;
+  padding: 16px;
+  color: white;
 }
 
-a {
-  color: #00B7FF;
+.logo-search {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  background-color: beige;
+  padding: 8px;
+  margin-left: 30px;
+  border-radius: 10px;
+  color: black;
+}
+
+#searchInput {
+  width: 720px;
+  max-width: 60vw;
+  border: 0px;
+  background: beige;
+}
+
+html {
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+}
+
+.user-menu {
+  font-size: 20px;
+}
+
+.fa-regular.fa-sun {
+  margin: 8px;
+}
+
+.fa-regular.fa-heart {
+  margin: 8px;
+}
+
+.fa-solid.fa-cart-shopping {
+  margin: 8px;
+}
+
+.navbar {
+  /* background: #0b0b98; */
+  background: #010163;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.logos {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.logos {
+  text-align: center;
+}
+
+
+.text {
+  font-size: 36px;
+}
+
+
+.produkts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+
+.fire-icon {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: #f16034;
+  font-size: 20px;
+}
+
+.produkt {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbdada;
+}
+
+.sveriges{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 36px;
+}
+
+.service{
+  width: 300px;
+  margin: 16px;
+  text-align: center;
+}
+
+footer {
+  height: 200px;
+  background-color: #010163;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 36px;
+  color: white;
+}
+
+
+.footer-item {
+  width: 250px;
 }
