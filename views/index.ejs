@@ -11,21 +11,27 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"       rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="/stylesheets/style.css" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/d89d40e6ac.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
     <!-- Start Header med logo och sökruta -->
     <header>
+            
         <div class="header">
-            <span class="logo">BilDirekt</span>
+                <span class="logo">
+                    BilDirekt
+                </span>
+                
             <div>
                 <ul class="topnav">
                     <li><a href="#">Köpa bil</a></li>
@@ -34,30 +40,24 @@
                     <li><a href="#">Kontakt</a></li>
                 </ul>
             </div>
+                
             <div class="header-icons">
-                <span class="header-search-icon">
-                    <a href="#"><i class="fas fa-search" style="color: black;"></i></a>
-                </span>
-                <span class="header-heart-icon">
-                    <a href="#" style="color: red;"><i class="fas fa-heart"></i></a>
-                </span>
-                <span class="header-profile-icon">
-                    <a href="#" style="color: gray;"><i class="fa fa-user" aria-hidden="true"></i></a>
-                </span>
-            </div>
-        </div>
-    </header>
-    <!-- End Header med logo och sökruta -->
 
-    <!-- Start Main sektion -->
-    <main>
-        <!-- Start Hero sektion -->
-        <section class="hero">
-            <div><img src="image/hero.png" alt="Hero bild" style="width: 100%; height: auto;"></div>
-            <div class="hero-text">
-                <span>Vi hjälper dig till ett tryggt bilköp</span>
-            </div>
-        </section>
+                <span class="header-search-icon">
+                    <a href="#">
+                        <i class="fas fa-search" style="color: black;">
+                        </i>
+                     </a>
+                </span>
+
+                <span class="header-heart-icon">
+                    <a href="#" style="color: red;">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </span>
+
+                <span class="header-profile-icon">
+                    <a href="#" style="color: gray;">
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </a>
                 </span>
@@ -74,34 +74,33 @@
             <!-- Start Hero sektion -->
                 <section class="hero">
 
-                    <div><img src="image/hero.png" alt="Hero bild" width="1400" height="300";></div>
+                    <img src="/images/hero.png" alt="Hero bild";>
                     <div class="hero-text">
                         <span>Vi hjälper dig till ett tryggt bilköp</span>
                     </div>
                 </section>
             <!-- End Hero sektion -->
 
-            <!--Start Top Nav-->
-                <section class="topnav">
-                    <span class="search-box">
+            <!--Start Sökbar-->
+                
+                    <div class="search-bar">
+                        <div class="search-box">
                         <input type="search" placeholder="Sök produkt">
-                        <span class="search-icon">
-                            <a href="#">
-                                <i class="fas fa-search" style="color: black;height:20px;line-height:20px;width:20px">
-                                </i>
-                            </a>
-                        </span>   
-                    </span>
-                </section>
-            <!--End Top Nav-->   
+                        <button class="filter-button">Filter</button>
+                       
+                        </div>  
+                    </div>
+                
+            <!--End Sökbar-->   
+
 
 
             <!-- Start Produktsektion -->
                 <section class="products">
                     <div class="product">
-                        <span class="badge"><img src="image/flame.png" alt="flame" width="50" height="60"></span>
+                        <span class="badge"><img src="/images/flame.png" alt="flame" width="50" height="60"></span>
                         <a href="Product-details/Product-details.html">
-                            <img src="image/300x300.png" alt="Produkt 1">
+                            <img src="/images/300x300.png" alt="Produkt 1">
                         </a>
                         <span class="product-name">Merceds-Benz E-Klass</span>
                         <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
@@ -121,7 +120,7 @@
                     </div>
                     <div class="product">
                         <a href="Product-details/Product-details.html">
-                            <img src="image/300x300.png" alt="Produkt 1">
+                            <img src="/images/300x300.png" alt="Produkt 1">
                         </a>
                         <span class="product-name">Merceds-Benz E-Klass</span>
                         <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
@@ -141,7 +140,7 @@
                     </div>
                     <div class="product">
                         <a href="Product-details/Product-details.html">
-                            <img src="image/300x300.png" alt="Produkt 1">
+                            <img src="/images/300x300.png" alt="Produkt 1">
                         </a>
                         <span class="product-name">Merceds-Benz E-Klass</span>
                         <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
@@ -161,7 +160,7 @@
                     </div>
                     <div class="product">
                         <a href="Product-details/Product-details.html">
-                            <img src="image/300x300.png" alt="Produkt 1">
+                            <img src="/images/300x300.png" alt="Produkt 1">
                         </a>
                         <span class="product-name">Merceds-Benz E-Klass</span>
                         <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
@@ -181,7 +180,7 @@
                     </div>
                     <div class="product">
                         <a href="Product-details/Product-details.html">
-                            <img src="image/300x300.png" alt="Produkt 1">
+                            <img src="/images/300x300.png" alt="Produkt 1">
                         </a>
                         <span class="product-name">Merceds-Benz E-Klass</span>
                         <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
@@ -201,7 +200,7 @@
                     </div>
                     <div class="product">
                         <a href="Product-details/Product-details.html">
-                            <img src="image/300x300.png" alt="Produkt 1">
+                            <img src="/images/300x300.png" alt="Produkt 1">
                         </a>
                         <span class="product-name">Merceds-Benz E-Klass</span>
                         <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
@@ -221,7 +220,7 @@
                     </div>
                     <div class="product">
                         <a href="Product-details/Product-details.html">
-                            <img src="image/300x300.png" alt="Produkt 1">
+                            <img src="/images/300x300.png" alt="Produkt 1">
                         </a>
                         <span class="product-name">Merceds-Benz E-Klass</span>
                         <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
@@ -241,7 +240,7 @@
                     </div>
                     <div class="product">
                         <a href="Product-details/Product-details.html">
-                            <img src="image/300x300.png" alt="Produkt 1">
+                            <img src="/images/300x300.png" alt="Produkt 1">
                         </a>
                         <span class="product-name">Merceds-Benz E-Klass</span>
                         <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
@@ -261,7 +260,7 @@
                     </div>
                     <div class="product">
                         <a href="Product-details/Product-details.html">
-                            <img src="image/300x300.png" alt="Produkt 1">
+                            <img src="/images/300x300.png" alt="Produkt 1">
                         </a>
                         <span class="product-name">Merceds-Benz E-Klass</span>
                         <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
@@ -281,7 +280,7 @@
                     </div>
                     <div class="product">
                         <a href="Product-details/Product-details.html">
-                            <img src="image/300x300.png" alt="Produkt 1">
+                            <img src="/images/300x300.png" alt="Produkt 1">
                         </a>
                         <span class="product-name">Merceds-Benz E-Klass</span>
                         <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
