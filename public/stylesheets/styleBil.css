@@ -1,0 +1,633 @@
+body {
+    box-sizing: border-box;
+    direction: ltr;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    
+  }
+  
+  .orangHover:hover{
+    color: #f88715;
+    border: 2px solid #f88715;
+    
+  }
+  
+  /* nothing to do with this code 
+  #rcorners {
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+  }                      */
+  
+  /* Start Header */
+  .header {
+    display: flex;
+    margin: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    margin: 10px;
+    font-size: 30px;
+    font-family: "Inria Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+    
+  }
+  
+  .logo:link, .logo:visited { 
+    text-decoration: none;
+    color: black;
+  }
+    
+  
+  .header-icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  .header-icon {
+    margin: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    
+  }
+  
+  .header-icon a{
+    color: gray;
+  
+  }
+  
+  .menu-icon {
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+    margin-left: 20px; 
+  }
+  
+  .dropdown-panel {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 55px; /* Adjust based on your navbar height */
+    right: 20px; /* Aligns dropdown to the right */
+    background-color: lightgray;
+    width: 200px; /* Set a width for the dropdown */
+    z-index: 1;
+    border-radius: 12px 0px 0px 12px;
+  }
+  
+  .dropdown-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown-links a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    animation: mymove 5s infinite;
+   }
+   
+   @keyframes mymove {
+     50% {border-radius: 50px;}
+   
+  }
+  
+  .dropdown-links a:hover {
+    color: black;
+    background-color: rgb(139, 139, 129); 
+    text-decoration: none;
+  }
+  
+  
+  /* Start Top Nav */
+  ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  ul.topnav li {
+    float: left;
+  }
+  
+  ul.topnav li a {
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 14px 12px;
+    text-decoration: none;
+    font-size: medium;
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  ul.topnav li a:hover {
+    background-color: rgb(139, 139, 129);
+  }
+  
+  /* End Header */
+  
+  /* Start bilContainer section */
+  .bilContainer {
+    display: flex;
+    justify-content:space-evenly;
+    align-items:flex-start;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+    text-align: left;
+    font-size: 20px;
+    gap: 10px; 
+    flex-wrap: nowrap;  
+    overflow: hidden; /* Prevents overflow */
+    width: 100%;
+    border-radius: 12px;
+    border: solid 1px #878181;
+    box-shadow: 0px 10px 10px lightgray;
+    
+  }
+  
+  .gallery {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+    margin: 0px 10px 0px 10px;
+  }
+  
+  .main-image {
+    position: relative;
+  }
+  
+  .main-image img {
+    width: 100%; /* Ensures the image scales to fit the container width */
+    height: auto;
+    border-radius: 15px;
+    padding: 2px;
+    border: 1px solid #ddd;
+    transition: border .2sease-in-out;
+  }
+  
+  .thumbnails {
+    display: flex;
+    justify-content:center;
+    margin-top: 10px;
+  }
+  
+  .thumbnail {
+   width: 23.5%; /* Ensures the image scales to fit the container width */
+   height: auto;
+   margin: 10px 5px;
+   cursor: pointer;
+    
+  }
+  
+  .thumbnail:hover {
+    border: 2px solid #f88715;
+  }
+  
+  .arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+  }
+  
+  .arrow {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+  }
+  .arrow:hover {
+    color: #f88715;
+    border: 2px solid #f88715;
+    
+  }
+  
+  
+  .bilContainer-text {
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    min-width: 30%;
+    
+  }
+  
+  .price {
+    
+    font-size: 20px;
+    font-family: "Inria Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+  }
+  .smarta {
+    
+    font-size: 20px;
+    font-family: "Inria Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+    margin-bottom: 10px;
+  }
+  .price-title {
+   
+    bottom: 30px;
+    left: 10px;
+    font-size: 18px;
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+  }
+  .smarta-title {
+    
+    bottom: 30px;
+    right: 15px;
+    font-size: 18px;
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+  }
+  
+  .bil-name {
+   
+    bottom: 120px;
+    left: 5px;
+    font-size: 2rem;
+    color: black;
+    font-family: "Inria Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .bil-varumärke {
+    
+    bottom: 100px;
+    left: 3.4px;
+    font-size: 1.5rem;
+    color: black;
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+  
+  .fordon-data {
+    
+    bottom: 60px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+    vertical-align: middle;
+    
+  }
+  
+  .fordon-data-badge {
+    background-color: lightgray;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    min-width:fit-content;
+    align-content:center ;
+    
+    
+  }
+  
+  .button {
+    background-color: #a08970; /* Button background color */
+    color: black; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 5px 5px 5px #a19587;
+    padding: 10px 15px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 10px; 
+    font-size: 1.6rem;
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  a:link, a:visited {
+    text-decoration: none;
+  
+  }
+  
+  .button:hover {
+    background-color: #f88715; /* Darker blue on hover */
+    text-decoration: none;
+  }
+  
+  /* End bilContainer section */
+  
+  /*carDetails section*/
+  
+   .carDetails span{
+    margin-left: 15px;
+    font-size: 2rem;
+    color: black;
+    font-family: "Inria Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+    
+   }
+   .carDetails p{
+    background-color: lightgray;
+    color: black;
+    margin: 10px 15px;
+    padding: 5px;
+    font-size: 1.7rem;
+    font-family: "Inria Sans", serif;
+    font-weight: 300;
+    font-style: normal;
+    border-radius: 12px;
+    
+   }
+  
+  /*End carDetails section*/
+  
+  /*Other info section*/
+  
+  .otherInfo span{
+    margin-left: 15px;
+    font-size: 2rem;
+    color: black;
+    font-family: "Inria Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+    
+   }
+   .otherInfo p{
+    background-color: lightgray;
+    color: black;
+    margin: 10px 15px;
+    padding: 5px;
+    font-size: 1.7rem;
+    font-family: "Inria Sans", serif;
+    font-weight: 300;
+    font-style: normal;
+    border-radius: 12px;
+    
+   }
+  
+  /*End Other info section*/
+  
+  /*Start contact form section*/
+  
+  .contactForm{
+    display: inline-grid;
+    background-color: lightgrey;
+    justify-content: center;
+    align-items:start;
+    border-radius: 12px;
+    margin: 15px 15px;
+    padding: 15px;
+  }
+  
+  section span{
+    text-align:left;
+    margin-left: 15px;
+    font-size: 2rem;
+    color: black;
+    font-family: "Inria Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+   form label{
+    color: black;
+    font-size: 1.7rem;
+    font-family: "Inria Sans", serif;
+    font-weight: 300;
+    font-style: normal;
+   }
+  
+   form input{
+    width:100%;
+    border: 1px solid #878181;
+    border-radius: 5px;
+   }
+  
+   form textarea{
+    width:fit-content;
+    margin-bottom: 10px;
+    border: 1px solid #878181;
+    border-radius: 5px;
+    box-sizing:border-box;
+    float: left;
+    width:fit-content;
+   }
+  
+  
+  /*End contact form section*/
+  
+  
+  
+  /* Start Footer */
+  .footNav {
+    display: flex;
+    background-color: #8a8e9f;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .accordion-text {
+    color: white;
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 2px;
+  }
+  
+  .panel-heading {
+    padding-left: 0px;
+  }
+  
+  #Nlink {
+    color: white;
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+  
+  #Nlink:hover { 
+    text-decoration: none;
+    background-color: lightgray;
+    color: black;
+  }
+  
+  
+  .CMark {
+    width: 100%;
+    text-align: center;
+    margin: 2px;
+    color: #5e5959;
+    font-family: "Inria Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* End Footer */
+  
+  
+  
+  
+  /* Start Responsiv design  */
+  
+  @media (width < 640px) {
+  
+  
+    /*bilContainer*/
+  
+    .bilContainer{
+    flex-wrap: wrap;
+    justify-content: center;
+    
+   }
+  
+   .bilContainer-slider {
+    max-width:98%;
+    height: auto;
+   }
+  
+   .bilContainer-slider img {
+    max-width:auto; /* Ensures the image scales to fit the container width */
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+   }
+  
+  
+  
+   /*footer*/
+  
+   footer{
+    margin: 0 auto;
+    background-color: rgb(9, 255, 0);
+    width: 95%;
+   }
+  
+   ul.footnav li {
+     float: none;
+     background-color: #8a8e9f;
+     padding: 10px;
+   }
+   ul {
+     padding-bottom: 10px;
+   }
+  
+   .footNav {
+    
+     display: block;
+     background-color: white;
+     
+   }
+  
+   .panel-heading {
+     background-color: #8a8e9f;
+     margin-bottom: 10px;
+     margin-top: 10px;
+     border-radius: 12px;
+  
+   }
+  
+   .panel-heading:hover {
+     animation: mymove 5s infinite;
+    }
+    
+    @keyframes mymove {
+      50% {border-radius: 50px;}
+    
+   }
+  
+   .panel-heading:hover {
+     background-color: lightblue;
+   }
+  
+   #Nlink:hover{
+     text-decoration: none;
+   }
+  
+   .panel1-default {
+    background-color: #8a8e9f;
+    border-radius: 12px;
+   }
+  
+  }
+  
+  @media (width >= 640px) {
+  
+    .bilContainer{
+    flex-wrap: nowrap;
+  }
+  }
+  
+  
+  @media (width <= 740px) {
+     .b1{
+      font-size: 1.5rem;
+    
+  }
+  }
+  
+  
+  @media (width >= 1024px) {
+  
+    .menu-icon{
+    display: none;
+    }
+    header, main{
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+    
+  }
+  
+  @media (width < 1024px) {
+  
+    header, main{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    ul.topnav li {
+      float: none;
+      display: none;
+    }
+  
+  }
+  
+  
+  
+  
+  /* End Responsiv design  */
