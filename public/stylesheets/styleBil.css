@@ -399,9 +399,9 @@ body {
   .contactForm{
     display: inline-grid;
     background-color: lightgrey;
+    border-radius: 12px;
     justify-content: center;
     align-items:start;
-    border-radius: 12px;
     margin: 15px 15px;
     padding: 15px;
   }
