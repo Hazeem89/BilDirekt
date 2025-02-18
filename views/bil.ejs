@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BilDirekt</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"       rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/stylesheets/styleBil.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/d89d40e6ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <!-- Start Header med logo och sökruta -->
+<header>
+
+    <div class="header">
+        <a class="logo" href="/">
+            BilDirekt
+        </a>
+                
+        <div>
+            <ul class="topnav">
+                <li><a href="/">Köpa bil</a></li>
+                <li><a href="/">Service & verkstad</a></li>
+                <li><a href="/">Om oss</a></li>
+                <li><a href="/">Kontakt</a></li>
+            </ul>
+        </div>
+                
+        <div class="header-icons">
+
+            <span class="header-icon">
+                <a href="#">
+                    <i class="fas fa-search orangHover" >
+                    </i>
+                </a>
+            </span>
+
+            <span class="header-icon">
+                <a href="#" >
+                    <i class="fas fa-heart orangHover"></i>
+                </a>
+            </span>
+
+            <span class="header-icon">
+                <a href="#">
+                    <i class="fa fa-user orangHover"></i>
+                </a>
+            </span>
+            <div class="menu-icon orangHover" id="menu-icon">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <div class="dropdown-panel" id="dropdown-panel">
+                <ul class="dropdown-links">
+                    <li><a class="orangHover"href="#">Köpa bil</a></li>
+                    <li><a class="orangHover"href="#">Service & verkstad</a></li>
+                    <li><a class="orangHover"href="#">Om oss</a></li>
+                    <li><a class="orangHover"href="#">Kontakt</a></li>
+                </ul>
+            </div>
+
+        </div>   
+        <script>
+            document.getElementById('menu-icon').addEventListener('click', function() {
+                const dropdownPanel = document.getElementById('dropdown-panel');
+                dropdownPanel.style.display = dropdownPanel.style.display === 'block' ? 'none' : 'block';
+            });
+        </script>
+
+
+    </div>   
+          
+</header>
+  <!-- End Header med logo och sökruta -->
+<main>   
+    <!-- Start Car container section -->
+  <div class="bilContainer">
+    <div class="gallery">
+        <div class="main-image">
+            <img id="largeImage" src="/images/bild1.jpg" alt="Large Image">
+            <div class="arrows">
+                <span class="arrow left" onclick="changeImageByIndex(-1)">&#10094;</span>
+                <span class="arrow right" onclick="changeImageByIndex(1)">&#10095;</span>
+            </div>
+        </div>
+        <div class="thumbnails">
+            <img class="thumbnail" src="/images/bild1.jpg" alt="Thumbnail 1" onclick="changeImage('/images/bild1.jpg')" style="padding: 2px;border-radius: 15px;">
+            <img class="thumbnail" src="/images/bild2.jpg" alt="Thumbnail 2" onclick="changeImage('/images/bild2.jpg')"style="padding: 2px;border-radius: 15px;">
+            <img class="thumbnail" src="/images/bild3.jpg" alt="Thumbnail 3" onclick="changeImage('/images/bild3.jpg')"style="padding: 2px;border-radius: 15px;">
+            <img class="thumbnail" src="/images/bild4.jpg" alt="Thumbnail 4" onclick="changeImage('/images/bild4.jpg')"style="padding: 2px;border-radius: 15px;">
+        </div>
+    </div>
+    
+    <script>
+      const images = ['/images/bild1.jpg', '/images/bild2.jpg', '/images/bild3.jpg', '/images/bild4.jpg'];
+      let currentIndex = 0;
+
+      function changeImage(newImage) {
+        document.getElementById('largeImage').src = newImage;
+        currentIndex = images.indexOf(newImage);
+      }
+
+      function changeImageByIndex(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) {
+          currentIndex = images.length - 1; // Loop to last image
+        } else if (currentIndex >= images.length) {
+          currentIndex = 0; // Loop to first image
+        }
+        document.getElementById('largeImage').src = images[currentIndex];
+      }
+    </script>
+
+    <div class="bilContainer-text">
+      <span class="bil-name">Merceds-Benz E-Klass</span><br>
+      <span class="bil-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span><br><br>
+      <span class="price-title">Pris</span><br>
+      <span class="price">350 000 kr</span><br><br>
+      <span class="smarta-title">Smarta lånet</span><br>
+      <span class="smarta">4 250 kr/mån</span><br>
+      <div class="fordon-data">
+          <span class="fordon-data-badge">2020</span>
+          <span class="fordon-data-badge">7000 mil</span>
+          <span class="fordon-data-badge">Diesel</span>
+          <span class="fordon-data-badge">Automat</span>
+      </div> <br>
+      <a href="#contact-form" class="button b1" >Kontakta en säljare</a>
+    </div>
+  </div>
+    <!-- End Car container section -->
+
+    <!-- Start Car details section -->
+  <div>
+    <div class="carDetails">
+        <span>Biluppgifter</span>
+        <p>Visste du att nybilsgarantin endast gäller om bilen har en komplett och korrekt servicehistorik? Är du osäker på om xx är ett tryggt köp utan oväntade överraskningar? Få tillgång till digitala rapporter direkt från</p>
+    </div>
+  </div>
+    <!-- End Car details section -->
+
+    <!-- Start Other info section -->
+  <div>
+    <div class="otherInfo">
+        <span>Övrig info</span>
+        <p>Välkommen till BilDirekt.<br>Vi hjälper dig med allt kring ditt bilköp från att hitta drömbilen till att välja rätt finansiering. 
+        För mer information gällande detta fordon kontakta oss på BilDirekt Vi tar emot alla inbytesbilar oavsett skick, ålder & miltal.</p>
+    </div>
+  </div>
+    <!-- End Other info section -->
+
+
+
+
+
+
+</main>
+
+
+
+<!-- Start Footer -->
+<footer>
+            
+    <div class="footNav" id="accordion">
+            <div class="panel1-default" >
+            <div class="panel-heading">
+                <h4 
+                class="panel1-title">
+                <a data-toggle="collapse"
+                data-parent="#accordion" href="#collapse1" id="Nlink">Kontakt</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel1-collapse collapse">
+                <div class="accordion-body">
+                        <ul>
+                            <li><a href="#" class="accordion-text"id="Nlink">Hitta oss</a></li>
+                            <li><a href="#" class="accordion-text"id="Nlink">Karriär på BilDirekt</a></li>
+                            <li><a href="#" class="accordion-text"id="Nlink">Prenumerera på vårtnyhetsbrev</a></li>
+                        </ul>
+                </div>
+            </div>
+            </div>
+        <div class="panel1-default">
+            <div class="panel-heading">
+                <h4 class="panel1-title">
+                <a data-toggle="collapse" data-parent="#accordion" 
+                href="#collapse2" id="Nlink">Service & verkstad</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="accordion-body">
+                        <ul>
+                            <li><a href="#" class="accordion-text"id="Nlink">Originalservice</a></li>
+                            <li><a href="#" class="accordion-text"id="Nlink">Serviceavtal</a></li>
+                            <li><a href="#" class="accordion-text"id="Nlink">Reparation</a></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+        <div class="panel1-default">
+            <div class="panel-heading">
+                <h4 class="panel1-title">
+                <a data-toggle="collapse" data-parent="#accordion" 
+                href="#collapse3" id="Nlink">Om oss</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="accordion-body">
+                        <ul>
+                            <li><a href="#" class="accordion-text"id="Nlink">Kundservide</a></li>
+                            <li><a href="#" class="accordion-text"id="Nlink">Vår historia</a></li>
+                            <li><a href="#" class="accordion-text"id="Nlink">Kvalitets- och miljöpolicy</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="CMark">
+            <span>Copyright <span style="font-size: large;font-family: Arial, Helvetica, sans-serif;vertical-align: middle;">&copy;</span> BilDirekten 2025</span>
+            </div>
+    </div>
+
+</footer>
+
+<!--End Footers-->
+</body>
+</html>
