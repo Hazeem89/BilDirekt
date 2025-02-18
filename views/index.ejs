@@ -24,49 +24,68 @@
 </head>
 <body>
 
-    <!-- Start Header med logo och sökruta -->
+    <!-- Start Header -->
     <header>
             
         <div class="header">
-                <span class="logo">
-                    BilDirekt
-                </span>
-                
+
+            <a class="logo" href="/">
+                BilDirekt
+            </a>
+                    
             <div>
                 <ul class="topnav">
-                    <li><a href="#">Köpa bil</a></li>
-                    <li><a href="#">Service & verkstad</a></li>
-                    <li><a href="#">Om oss</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="/">Köpa bil</a></li>
+                    <li><a href="/">Service & verkstad</a></li>
+                    <li><a href="/">Om oss</a></li>
+                    <li><a href="/">Kontakt</a></li>
                 </ul>
             </div>
-                
+                    
             <div class="header-icons">
-
-                <span class="header-search-icon">
+    
+                <span class="header-icon">
                     <a href="#">
-                        <i class="fas fa-search" style="color: black;">
+                        <i class="fas fa-search orangHover" >
                         </i>
-                     </a>
-                </span>
-
-                <span class="header-heart-icon">
-                    <a href="#" style="color: red;">
-                        <i class="fas fa-heart"></i>
                     </a>
                 </span>
-
-                <span class="header-profile-icon">
-                    <a href="#" style="color: gray;">
-                        <i class="fa fa-user" aria-hidden="true"></i>
+    
+                <span class="header-icon">
+                    <a href="#" >
+                        <i class="fas fa-heart orangHover"></i>
                     </a>
                 </span>
-
-                </div>   
+    
+                <span class="header-icon">
+                    <a href="#">
+                        <i class="fa fa-user orangHover"></i>
+                    </a>
+                </span>
+                <div class="menu-icon orangHover" id="menu-icon">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <div class="dropdown-panel" id="dropdown-panel">
+                    <ul class="dropdown-links">
+                        <li><a class="orangHover"href="#">Köpa bil</a></li>
+                        <li><a class="orangHover"href="#">Service & verkstad</a></li>
+                        <li><a class="orangHover"href="#">Om oss</a></li>
+                        <li><a class="orangHover"href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+    
             </div>   
+            <script>
+                document.getElementById('menu-icon').addEventListener('click', function() {
+                    const dropdownPanel = document.getElementById('dropdown-panel');
+                    dropdownPanel.style.display = dropdownPanel.style.display === 'block' ? 'none' : 'block';
+                });
+            </script>
+                    
+        </div>   
             
-        </header>
-    <!-- End Header med logo och sökruta -->
+     </header>
+    <!-- End Header -->
 
     <!-- Start Main sektion -->
         <main>
@@ -86,7 +105,7 @@
                     <div class="search-bar">
                         <div class="search-box">
                         <input type="search" placeholder="Sök produkt">
-                        <button class="filter-button">Filter</button>
+                        <button class="button">Filter</button>
                        
                         </div>  
                     </div>
@@ -97,14 +116,15 @@
 
             <!-- Start Produktsektion -->
                 <section class="products">
+                    <!--
                     <div class="product">
                         <span class="badge"><img src="/images/flame.png" alt="flame" width="50" height="60"></span>
-                        <a href="Product-details/Product-details.html">
-                            <img src="/images/300x300.png" alt="Produkt 1">
+                        <a href="/bil">
+                            <img src="/images/bild1.jpg" alt="Produkt 1">
                         </a>
-                        <span class="product-name">Merceds-Benz E-Klass</span>
-                        <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
-                        <span class="heart-icon"> <a href="#" style="color: red;">
+                        <span class="bil-name">Merceds-Benz E-Klass</span><br>
+                        <span class="bil-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
+                        <span class="heart-icon"> <a href="#" style="color: #f88715;">
                             <i class="fas fa-heart"></i>
                         </a></span>
                         <span class="price-title">Pris</span>
@@ -116,242 +136,264 @@
                             <span class="fordon-data-badge">7000 mil</span>
                             <span class="fordon-data-badge">Diesel</span>
                             <span class="fordon-data-badge">Automat</span>
+                        </div>
+                    </div>   -->
+                    <div class="product">
+                        <div class="productBild">
+                            <a href="/bil">
+                                <img src="/images/bild1.jpg" alt="Produkt 1">
+                            </a>
+                            <div class="heart-icon"> <a href="#" style="color: rgb(216, 190, 190);">
+                                <i class="fas fa-heart"></i>
+                            </a></div>
+                        </div>
+
+                        <div class="productText">
+                            <div class="bil-name">Merceds-Benz E-Klass</div>
+                            <div class="bil-varumärke">220 D | AMG LINE| 3,95 % RÄNTA</div>
+                            <div class="price-title">Pris</div>
+                            <div class="price">350 000 kr</div>
+                            <div class="smarta-title">Smarta lånet</div>
+                            <div class="smarta">4 250 kr/mån</div>
+                            <div class="fordon-data">
+                                <span class="fordon-data-badge">2020</span>
+                                <span class="fordon-data-badge">7000 mil</span>
+                                <span class="fordon-data-badge">Diesel</span>
+                                <span class="fordon-data-badge">Automat</span>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
-                        <a href="Product-details/Product-details.html">
-                            <img src="/images/300x300.png" alt="Produkt 1">
-                        </a>
-                        <span class="product-name">Merceds-Benz E-Klass</span>
-                        <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
-                        <span class="heart-icon"> <a href="#" style="color: red;">
-                            <i class="fas fa-heart"></i>
-                        </a></span>
-                        <span class="price-title">Pris</span>
-                        <span class="price">350 000 kr</span>
-                        <span class="smarta-title">Smarta lånet</span>
-                        <span class="smarta">4 250 kr/mån</span>
-                        <div class="fordon-data">
-                            <span class="fordon-data-badge">2020</span>
-                            <span class="fordon-data-badge">7000 mil</span>
-                            <span class="fordon-data-badge">Diesel</span>
-                            <span class="fordon-data-badge">Automat</span>
+                        <div class="productBild">
+                            <a href="/bil">
+                                <img src="/images/bild1.jpg" alt="Produkt 1">
+                            </a>
+                            <div class="heart-icon"> <a href="#" style="color: rgb(216, 190, 190);">
+                                <i class="fas fa-heart"></i>
+                            </a></div>
+                        </div>
+
+                        <div class="productText">
+                            <div class="bil-name">Merceds-Benz E-Klass</div>
+                            <div class="bil-varumärke">220 D | AMG LINE| 3,95 % RÄNTA</div>
+                            <div class="price-title">Pris</div>
+                            <div class="price">350 000 kr</div>
+                            <div class="smarta-title">Smarta lånet</div>
+                            <div class="smarta">4 250 kr/mån</div>
+                            <div class="fordon-data">
+                                <span class="fordon-data-badge">2020</span>
+                                <span class="fordon-data-badge">7000 mil</span>
+                                <span class="fordon-data-badge">Diesel</span>
+                                <span class="fordon-data-badge">Automat</span>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
-                        <a href="Product-details/Product-details.html">
-                            <img src="/images/300x300.png" alt="Produkt 1">
-                        </a>
-                        <span class="product-name">Merceds-Benz E-Klass</span>
-                        <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
-                        <span class="heart-icon"> <a href="#" style="color: red;">
-                            <i class="fas fa-heart"></i>
-                        </a></span>
-                        <span class="price-title">Pris</span>
-                        <span class="price">350 000 kr</span>
-                        <span class="smarta-title">Smarta lånet</span>
-                        <span class="smarta">4 250 kr/mån</span>
-                        <div class="fordon-data">
-                            <span class="fordon-data-badge">2020</span>
-                            <span class="fordon-data-badge">7000 mil</span>
-                            <span class="fordon-data-badge">Diesel</span>
-                            <span class="fordon-data-badge">Automat</span>
+                        <div class="productBild">
+                            <a href="/bil">
+                                <img src="/images/bild1.jpg" alt="Produkt 1">
+                            </a>
+                            <div class="heart-icon"> <a href="#" style="color: rgb(216, 190, 190);">
+                                <i class="fas fa-heart"></i>
+                            </a></div>
+                        </div>
+
+                        <div class="productText">
+                            <div class="bil-name">Merceds-Benz E-Klass</div>
+                            <div class="bil-varumärke">220 D | AMG LINE| 3,95 % RÄNTA</div>
+                            <div class="price-title">Pris</div>
+                            <div class="price">350 000 kr</div>
+                            <div class="smarta-title">Smarta lånet</div>
+                            <div class="smarta">4 250 kr/mån</div>
+                            <div class="fordon-data">
+                                <span class="fordon-data-badge">2020</span>
+                                <span class="fordon-data-badge">7000 mil</span>
+                                <span class="fordon-data-badge">Diesel</span>
+                                <span class="fordon-data-badge">Automat</span>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
-                        <a href="Product-details/Product-details.html">
-                            <img src="/images/300x300.png" alt="Produkt 1">
-                        </a>
-                        <span class="product-name">Merceds-Benz E-Klass</span>
-                        <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
-                        <span class="heart-icon"> <a href="#" style="color: red;">
-                            <i class="fas fa-heart"></i>
-                        </a></span>
-                        <span class="price-title">Pris</span>
-                        <span class="price">350 000 kr</span>
-                        <span class="smarta-title">Smarta lånet</span>
-                        <span class="smarta">4 250 kr/mån</span>
-                        <div class="fordon-data">
-                            <span class="fordon-data-badge">2020</span>
-                            <span class="fordon-data-badge">7000 mil</span>
-                            <span class="fordon-data-badge">Diesel</span>
-                            <span class="fordon-data-badge">Automat</span>
+                        <div class="productBild">
+                            <a href="/bil">
+                                <img src="/images/bild1.jpg" alt="Produkt 1">
+                            </a>
+                            <div class="heart-icon"> <a href="#" style="color: rgb(216, 190, 190);">
+                                <i class="fas fa-heart"></i>
+                            </a></div>
+                        </div>
+
+                        <div class="productText">
+                            <div class="bil-name">Merceds-Benz E-Klass</div>
+                            <div class="bil-varumärke">220 D | AMG LINE| 3,95 % RÄNTA</div>
+                            <div class="price-title">Pris</div>
+                            <div class="price">350 000 kr</div>
+                            <div class="smarta-title">Smarta lånet</div>
+                            <div class="smarta">4 250 kr/mån</div>
+                            <div class="fordon-data">
+                                <span class="fordon-data-badge">2020</span>
+                                <span class="fordon-data-badge">7000 mil</span>
+                                <span class="fordon-data-badge">Diesel</span>
+                                <span class="fordon-data-badge">Automat</span>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
-                        <a href="Product-details/Product-details.html">
-                            <img src="/images/300x300.png" alt="Produkt 1">
-                        </a>
-                        <span class="product-name">Merceds-Benz E-Klass</span>
-                        <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
-                        <span class="heart-icon"> <a href="#" style="color: red;">
-                            <i class="fas fa-heart"></i>
-                        </a></span>
-                        <span class="price-title">Pris</span>
-                        <span class="price">350 000 kr</span>
-                        <span class="smarta-title">Smarta lånet</span>
-                        <span class="smarta">4 250 kr/mån</span>
-                        <div class="fordon-data">
-                            <span class="fordon-data-badge">2020</span>
-                            <span class="fordon-data-badge">7000 mil</span>
-                            <span class="fordon-data-badge">Diesel</span>
-                            <span class="fordon-data-badge">Automat</span>
+                        <div class="productBild">
+                            <a href="/bil">
+                                <img src="/images/bild1.jpg" alt="Produkt 1">
+                            </a>
+                            <div class="heart-icon"> <a href="#" style="color: rgb(216, 190, 190);">
+                                <i class="fas fa-heart"></i>
+                            </a></div>
+                        </div>
+
+                        <div class="productText">
+                            <div class="bil-name">Merceds-Benz E-Klass</div>
+                            <div class="bil-varumärke">220 D | AMG LINE| 3,95 % RÄNTA</div>
+                            <div class="price-title">Pris</div>
+                            <div class="price">350 000 kr</div>
+                            <div class="smarta-title">Smarta lånet</div>
+                            <div class="smarta">4 250 kr/mån</div>
+                            <div class="fordon-data">
+                                <span class="fordon-data-badge">2020</span>
+                                <span class="fordon-data-badge">7000 mil</span>
+                                <span class="fordon-data-badge">Diesel</span>
+                                <span class="fordon-data-badge">Automat</span>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
-                        <a href="Product-details/Product-details.html">
-                            <img src="/images/300x300.png" alt="Produkt 1">
-                        </a>
-                        <span class="product-name">Merceds-Benz E-Klass</span>
-                        <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
-                        <span class="heart-icon"> <a href="#" style="color: red;">
-                            <i class="fas fa-heart"></i>
-                        </a></span>
-                        <span class="price-title">Pris</span>
-                        <span class="price">350 000 kr</span>
-                        <span class="smarta-title">Smarta lånet</span>
-                        <span class="smarta">4 250 kr/mån</span>
-                        <div class="fordon-data">
-                            <span class="fordon-data-badge">2020</span>
-                            <span class="fordon-data-badge">7000 mil</span>
-                            <span class="fordon-data-badge">Diesel</span>
-                            <span class="fordon-data-badge">Automat</span>
+                        <div class="productBild">
+                            <a href="/bil">
+                                <img src="/images/bild1.jpg" alt="Produkt 1">
+                            </a>
+                            <div class="heart-icon"> <a href="#" style="color: rgb(216, 190, 190);">
+                                <i class="fas fa-heart"></i>
+                            </a></div>
+                        </div>
+
+                        <div class="productText">
+                            <div class="bil-name">Merceds-Benz E-Klass</div>
+                            <div class="bil-varumärke">220 D | AMG LINE| 3,95 % RÄNTA</div>
+                            <div class="price-title">Pris</div>
+                            <div class="price">350 000 kr</div>
+                            <div class="smarta-title">Smarta lånet</div>
+                            <div class="smarta">4 250 kr/mån</div>
+                            <div class="fordon-data">
+                                <span class="fordon-data-badge">2020</span>
+                                <span class="fordon-data-badge">7000 mil</span>
+                                <span class="fordon-data-badge">Diesel</span>
+                                <span class="fordon-data-badge">Automat</span>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
-                        <a href="Product-details/Product-details.html">
-                            <img src="/images/300x300.png" alt="Produkt 1">
-                        </a>
-                        <span class="product-name">Merceds-Benz E-Klass</span>
-                        <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
-                        <span class="heart-icon"> <a href="#" style="color: red;">
-                            <i class="fas fa-heart"></i>
-                        </a></span>
-                        <span class="price-title">Pris</span>
-                        <span class="price">350 000 kr</span>
-                        <span class="smarta-title">Smarta lånet</span>
-                        <span class="smarta">4 250 kr/mån</span>
-                        <div class="fordon-data">
-                            <span class="fordon-data-badge">2020</span>
-                            <span class="fordon-data-badge">7000 mil</span>
-                            <span class="fordon-data-badge">Diesel</span>
-                            <span class="fordon-data-badge">Automat</span>
+                        <div class="productBild">
+                            <a href="/bil">
+                                <img src="/images/bild1.jpg" alt="Produkt 1">
+                            </a>
+                            <div class="heart-icon"> <a href="#" style="color: rgb(216, 190, 190);">
+                                <i class="fas fa-heart"></i>
+                            </a></div>
+                        </div>
+
+                        <div class="productText">
+                            <div class="bil-name">Merceds-Benz E-Klass</div>
+                            <div class="bil-varumärke">220 D | AMG LINE| 3,95 % RÄNTA</div>
+                            <div class="price-title">Pris</div>
+                            <div class="price">350 000 kr</div>
+                            <div class="smarta-title">Smarta lånet</div>
+                            <div class="smarta">4 250 kr/mån</div>
+                            <div class="fordon-data">
+                                <span class="fordon-data-badge">2020</span>
+                                <span class="fordon-data-badge">7000 mil</span>
+                                <span class="fordon-data-badge">Diesel</span>
+                                <span class="fordon-data-badge">Automat</span>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
-                        <a href="Product-details/Product-details.html">
-                            <img src="/images/300x300.png" alt="Produkt 1">
-                        </a>
-                        <span class="product-name">Merceds-Benz E-Klass</span>
-                        <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
-                        <span class="heart-icon"> <a href="#" style="color: red;">
-                            <i class="fas fa-heart"></i>
-                        </a></span>
-                        <span class="price-title">Pris</span>
-                        <span class="price">350 000 kr</span>
-                        <span class="smarta-title">Smarta lånet</span>
-                        <span class="smarta">4 250 kr/mån</span>
-                        <div class="fordon-data">
-                            <span class="fordon-data-badge">2020</span>
-                            <span class="fordon-data-badge">7000 mil</span>
-                            <span class="fordon-data-badge">Diesel</span>
-                            <span class="fordon-data-badge">Automat</span>
+                        <div class="productBild">
+                            <a href="/bil">
+                                <img src="/images/bild1.jpg" alt="Produkt 1">
+                            </a>
+                            <div class="heart-icon"> <a href="#" style="color: rgb(216, 190, 190);">
+                                <i class="fas fa-heart"></i>
+                            </a></div>
+                        </div>
+
+                        <div class="productText">
+                            <div class="bil-name">Merceds-Benz E-Klass</div>
+                            <div class="bil-varumärke">220 D | AMG LINE| 3,95 % RÄNTA</div>
+                            <div class="price-title">Pris</div>
+                            <div class="price">350 000 kr</div>
+                            <div class="smarta-title">Smarta lånet</div>
+                            <div class="smarta">4 250 kr/mån</div>
+                            <div class="fordon-data">
+                                <span class="fordon-data-badge">2020</span>
+                                <span class="fordon-data-badge">7000 mil</span>
+                                <span class="fordon-data-badge">Diesel</span>
+                                <span class="fordon-data-badge">Automat</span>
+                            </div>
                         </div>
                     </div>
                     <div class="product">
-                        <a href="Product-details/Product-details.html">
-                            <img src="/images/300x300.png" alt="Produkt 1">
-                        </a>
-                        <span class="product-name">Merceds-Benz E-Klass</span>
-                        <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
-                        <span class="heart-icon"> <a href="#" style="color: red;">
-                            <i class="fas fa-heart"></i>
-                        </a></span>
-                        <span class="price-title">Pris</span>
-                        <span class="price">350 000 kr</span>
-                        <span class="smarta-title">Smarta lånet</span>
-                        <span class="smarta">4 250 kr/mån</span>
-                        <div class="fordon-data">
-                            <span class="fordon-data-badge">2020</span>
-                            <span class="fordon-data-badge">7000 mil</span>
-                            <span class="fordon-data-badge">Diesel</span>
-                            <span class="fordon-data-badge">Automat</span>
+                        <div class="productBild">
+                            <a href="/bil">
+                                <img src="/images/bild1.jpg" alt="Produkt 1">
+                            </a>
+                            <div class="heart-icon"> <a href="#" style="color: rgb(216, 190, 190);">
+                                <i class="fas fa-heart"></i>
+                            </a></div>
+                        </div>
+
+                        <div class="productText">
+                            <div class="bil-name">Merceds-Benz E-Klass</div>
+                            <div class="bil-varumärke">220 D | AMG LINE| 3,95 % RÄNTA</div>
+                            <div class="price-title">Pris</div>
+                            <div class="price">350 000 kr</div>
+                            <div class="smarta-title">Smarta lånet</div>
+                            <div class="smarta">4 250 kr/mån</div>
+                            <div class="fordon-data">
+                                <span class="fordon-data-badge">2020</span>
+                                <span class="fordon-data-badge">7000 mil</span>
+                                <span class="fordon-data-badge">Diesel</span>
+                                <span class="fordon-data-badge">Automat</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="product">
-                        <a href="Product-details/Product-details.html">
-                            <img src="/images/300x300.png" alt="Produkt 1">
-                        </a>
-                        <span class="product-name">Merceds-Benz E-Klass</span>
-                        <span class="product-varumärke">220 D | AMG LINE | DRAGKROK | 3,95 % RÄNTA</span>
-                        <span class="heart-icon"> <a href="#" style="color: red;">
-                            <i class="fas fa-heart"></i>
-                        </a></span>
-                        <span class="price-title">Pris</span>
-                        <span class="price">350 000 kr</span>
-                        <span class="smarta-title">Smarta lånet</span>
-                        <span class="smarta">4 250 kr/mån</span>
-                        <div class="fordon-data">
-                            <span class="fordon-data-badge">2020</span>
-                            <span class="fordon-data-badge">7000 mil</span>
-                            <span class="fordon-data-badge">Diesel</span>
-                            <span class="fordon-data-badge">Automat</span>
-                        </div>
-                    </div>
+                   
                   
                 </section>
             <!-- End Produktsektion -->
 
-            <!-- Start Icons bar 
-                <div class="icons">
-                    <div class="icon">
-                        <div class="fas fa-globe-americas" style="font-size:30px;">
-                            <span class="icon-text">Gratis frakt och returer</span>
-                        </div>
-                    </div>
-                    <div class="icon">
-                        <div class="fas fa-fighter-jet" style="font-size:30px;">
-                            <span class="icon-text">Expressfrakt</span>
-                        </div>
-                    </div>
-                    <div class="icon">
-                        <div class="fas fa-shield-alt" style="font-size:30px;">
-                            <span class="icon-text">Säkra betalningar</span>
-                        </div>
-                    </div>
-                    <div class="icon"> 
-                        <div class="far fa-smile" style="font-size:30px;">
-                            <span class="icon-text">Nyheter varje dag</span>
-                        </div>
-                    </div>    
-                </div>
-            <!-- End Icons bar -->
         </main>
 
     <!-- End Main sektion -->
 
     <!-- Start Footer sektion -->
-    <section class="footnav">
-            
-        <div class="panel-group1" id="accordion">
-                <div class="panel1 panel1-default" >
-                <div class="panel-heading">
-                    <h4 
-                    class="panel1-title">
-                    <a data-toggle="collapse"
-                    data-parent="#accordion" href="#collapse1" style="color: white;font-family: Inria Sans;">Kontakt</a>
-                    </h4>
+    <footer>
+
+        <div class="footNav" id="accordion">
+            <div class="panel1 panel1-default" >
+            <div class="panel-heading">
+                <h4 
+                class="panel1-title">
+                <a data-toggle="collapse"
+                data-parent="#accordion" href="#collapse1" style="color: white;font-family: Inria Sans;">Kontakt</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel1-collapse collapse">
+                <div class="accordion-body">
+                        <ul>
+                            <li><a href="#" class="accordion-text">Hitta oss</a></li>
+                            <li><a href="#" class="accordion-text">Karriär på BilDirekt</a></li>
+                            <li><a href="#" class="accordion-text">Prenumerera på vårtnyhetsbrev</a></li>
+                        </ul>
                 </div>
-                <div id="collapse1" class="panel1-collapse collapse">
-                    <div class="accordion-body">
-                            <ul>
-                                <li><a href="#" class="accordion-text">Hitta oss</a></li>
-                                <li><a href="#" class="accordion-text">Karriär på BilDirekt</a></li>
-                                <li><a href="#" class="accordion-text">Prenumerera på vårtnyhetsbrev</a></li>
-                            </ul>
-                    </div>
-                </div>
-                </div>
+            </div>
+            </div>
             <div class="panel1 panel1-default">
                 <div class="panel-heading">
                     <h4 class="panel1-title">
@@ -388,11 +430,11 @@
             </div>
             <div class="CMark">
                 <span>Copyright <span style="font-size: large;font-family: Arial, Helvetica, sans-serif;vertical-align: middle;">&copy;</span> BilDirekten 2025</span>
-              </div>
+            </div>
         </div>
 
-    </section>
-<!--End Footersektion-->
+    </footer>
+<!--End Footer-->
     
     
 

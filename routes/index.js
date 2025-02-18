@@ -3,7 +3,13 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'BilDirekt' });
+  res.render('index', { title: 'Express' });
 });
+
+router.get('/bil', function(req, res, next) {
+  res.render('bil', { title: 'Bil' });
+});
+
+
 
 module.exports = router;
