@@ -224,30 +224,15 @@ body {
   justify-content: center;
   justify-self:center
 }
-/*
-.product {
-  position: relative;
-  display: inline-block;
-  gap: 5px;
-  height: 250px;
-  padding-bottom: 150px;
-  padding-top: 5px;
-  text-align: center;
-  border: 1px solid #878181;
-  border-radius: 5px;
-  box-shadow: 5px 5px 3px lightgray;
-}
 
-*/
 .product {
   position: relative;
+  padding-top: 5px;
   border: 1px solid #878181;
   border-radius: 5px;
   box-shadow: 5px 5px 3px lightgray;
   text-align: center;
   
-
-
 }
 
 .productBild {
@@ -264,97 +249,12 @@ body {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.badge img {
-  width: 40px;
-  height: 40px;
+.productBild img:hover{
+  color: #f88715;
+  border: 2px solid #f88715;
+  
 }
 
-.product img:hover {
-  transform: scale(1.05);
-}
-
-.heart-icon {
-  position: absolute;
-  top: 60%;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.productText{
-  padding: 10px;
-  width: 100%;
-  height: auto;
-  font-family: "Inria Sans", serif;
-  font-style: normal;
-  color: black;
-
-}
-
-
-.price {
-  position: absolute;
-  bottom: 5px;
-  left: 10px;
-  font-size: 2rem;
-  font-family: "Inria Sans", serif;
-  font-weight: 700;
-  font-style: normal;
-  color: black;
-}
-.smarta {
-  position: absolute;
-  bottom: 5px;
-  right: 10px;
-  font-size: 2rem;
-  font-family: "Inria Sans", serif;
-  font-weight: 700;
-  font-style: normal;
-  color: black;
-}
-.price-title {
-  position: absolute;
-  bottom: 30px;
-  left: 10px;
-  font-size: 18px;
-  font-family: "Inria Sans", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: black;
-}
-.smarta-title {
-  position: absolute;
-  bottom: 30px;
-  right: 15px;
-  font-size: 18px;
-  font-family: "Inria Sans", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: black;
-}
-
-.bil-name {
-  position: absolute;
-  bottom: 120px;
-  left: 5px;
-  font-size: 2rem;
-  color: black;
-  font-family: "Inria Sans", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.bil-varumärke {
-  position: absolute;
-  bottom: 100px;
-  left: 3.4px;
-  font-size: 1.5rem;
-  color: black;
-  font-family: "Inria Sans", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-wrap: wrap;
-}
 .badge {
   position: absolute;
   background-color: #77777700;
@@ -365,6 +265,76 @@ body {
   animation: horizontal-shaking 2s ease infinite;
   animation-fill-mode: backwards;
   z-index: 10;
+}
+
+.badge img {
+  width: 40px;
+  height: 40px;
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+    background-color: #77777700;
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+    background-color: #77777700;
+  }
+}
+
+.product img:hover {
+  transform: scale(1.05);
+}
+
+.heart-icon {
+  position: absolute;
+  top: 45%;
+  right: 25px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.productText{
+  margin-left: 10px;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  font-family: "Inria Sans", serif;
+  font-style: normal;
+ 
+}
+
+.bil-name {
+  position: absolute;
+  bottom: 120px;
+  left: 10px;
+  font-size: 2rem;
+  color: black;
+  font-family: "Inria Sans", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bil-varumärke {
+  position: absolute;
+  bottom: 100px;
+  left: 10px;
+  font-size: 1.5rem;
+  color: black;
+  font-family: "Inria Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-wrap: wrap;
 }
 
 .fordon-data {
@@ -388,51 +358,52 @@ body {
   align-content:center ;
 }
 
-@keyframes horizontal-shaking {
-  0% {
-    transform: translateX(0);
-    background-color: #77777700;
-  }
-  25% {
-    transform: translateX(5px);
-  }
-  50% {
-    transform: translateX(-5px);
-  }
-  75% {
-    transform: translateX(5px);
-  }
-  100% {
-    transform: translateX(0);
-    background-color: #77777700;
-  }
-}
-
-.icons {
-  position: relative;
-  display: grid;
-  flex-wrap: wrap;
-  vertical-align: middle;
-  justify-content: left;
-  align-items: start;
-  align-content: space-evenly;
-  margin: 20px;
-  grid-gap: 10px 30px;
-}
-
-.icon {
-  align-items: left;
-}
-
-.icon-text {
-  font-size: small;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  font-family: "Inria Sans", sans-serif;
+.price-title {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  font-size: 18px;
+  font-family: "Inria Sans", serif;
   font-weight: 400;
   font-style: normal;
+  color: black;
 }
+
+.price {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  font-size: 2rem;
+  font-family: "Inria Sans", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+}
+
+.smarta-title {
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
+  font-size: 18px;
+  font-family: "Inria Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+
+.smarta {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 2rem;
+  font-family: "Inria Sans", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+}
+
+
+
 
 /* End Produktsektion */
 
@@ -566,14 +537,6 @@ ul {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
  
-
-  .icons {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-  }
-
   .hero {
     display: flex;
     flex-wrap: nowrap;
